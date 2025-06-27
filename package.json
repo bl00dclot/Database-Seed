@@ -1,0 +1,25 @@
+{
+  "name": "databaseseed",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/bl00dclot/Database-Seed#readme",
+  "bugs": {
+    "url": "https://github.com/bl00dclot/Database-Seed/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bl00dclot/Database-Seed.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "dotenv": "^16.6.0",
+    "node": "^22.17.0"
+  }
+}

@@ -3,8 +3,9 @@ import fs from 'node:fs';
 import path from 'path';
 import { neon, Pool } from '@neondatabase/serverless';
 import tags from './tags.mjs'
+import 'dotenv/config'
 // --- CONFIGURATION ---
-
+console.log(process.env.DATABASE_URL)
 const DATA_DIR = path.join(process.cwd(), 'data', 'georgia');
 console.log(`Using data directory: ${DATA_DIR}`);
 
@@ -28,8 +29,8 @@ class StructuredCard {
   }
 }
 
-class paragraphBlock {
-  constructor(text, title) {
+class ParagraphBlock {
+  constructor(text, title = '') {
     this.type = 'paragraph';
     this.text = text;
     this.title = title
@@ -37,7 +38,7 @@ class paragraphBlock {
 }
 
 class listBlock {
-  constructor(items, title) {
+  constructor(items, title = '') {
     this.type = 'list';
     this.items = items;
     this.title = title
@@ -86,40 +87,55 @@ class PageTemplate {
   }
 }
 
-// function findObjectsWithKeyValue(obj, key, value) {
-//   const results = [];
-//   const visited = new WeakSet();
-//   function recurse(item) {
-//     // Only process if item is a non-null object
-//     if (item && typeof item === 'object') {
-//       if (visited.has(item)) return;          // avoid cycles
-//       visited.add(item);
+// Guarantee a value is always an array
+function asArray(val) {
+  if (Array.isArray(val)) return val;
+  if (val == null) return [];
+  return [val];
+}
+// Normalize a card into ordered blocks
+function normalizeCard(card) {
+  const blocks = [];
+  let order = 0;
 
-//       // If this object has the target key as its own property and value matches, record it
-//       if (!Array.isArray(item)
-//           && Object.prototype.hasOwnProperty.call(item, key)
-//           && item[key] === value) {
-//         results.push(item);
-//       }
+  // Heading
+  blocks.push({ type: 'heading_h2', payload: { text: card.title }, order: order++ });
 
-//       // Recurse into arrays or objects
-//       if (Array.isArray(item)) {
-//         for (const element of item) {
-//           recurse(element);
-//         }
-//       } else {
-//         for (const k in item) {
-//           // Only recurse on own properties
-//           if (Object.prototype.hasOwnProperty.call(item, k)) {
-//             recurse(item[k]);
-//           }
-//         }
-//       }
-//     }
-//   }
-//   recurse(obj);
-//   return results;
-// }
+  // Image
+  if (card.img_src) {
+    blocks.push({
+      type: 'image',
+      payload: { image_path: card.img_src, alt_text: card.img_alt },
+      order: order++
+    });
+  }
+
+  // Description blocks
+  for (const desc of asArray(card.description)) {
+    blocks.push({ type: desc.type, payload: desc, order: order++ });
+  }
+
+  // Content blocks
+  for (const c of asArray(card.content)) {
+    if (c.type === 'structured_card') {
+      // c.structured_card is the object you want to insert
+      blocks.push({ type: 'structured_card', payload: c.structured_card, order: order++ });
+    } else {
+      blocks.push({ type: c.type, payload: c, order: order++ });
+    }
+  }
+
+  // Footer
+  if (card.footer) {
+    blocks.push({
+      type: 'paragraph',
+      payload: { text: `Read more: <a href="${card.footer}">Explore further</a>` },
+      order: order++
+    });
+  }
+
+  return blocks;
+}
 const findProperty = (obj, nameToFind, propertyToReturn) => {
   const foundProperty = obj.find(item => item.type === nameToFind);
   return foundProperty ? foundProperty[propertyToReturn] : null;
@@ -190,7 +206,7 @@ function transformForSeed(src) {
 
       const newJSONData_General = new ContentBlock(
         "Culture and Traditions of Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           "Explore the rich culture and traditions of Georgia, from its ancient history to modern practices."
         ),
         mergedArray.map((card) => {
@@ -211,14 +227,14 @@ function transformForSeed(src) {
     case 'history':
       const newJSONData_History = new ContentBlock(
         "History of Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           "Discover the rich and diverse history of Georgia, from ancient civilizations to modern times."
         ),
         jsonData.map((card) => {
           return new StructuredCard({
             title: card.title,
             description: card.content.map((content) => {
-              return new paragraphBlock(
+              return new ParagraphBlock(
                 content.text || ''
               );
             }) || '',
@@ -237,7 +253,7 @@ function transformForSeed(src) {
 
         const newJSONData = new ContentBlock(
         "Culture and Traditions of Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           "Explore the rich culture and traditions of Georgia, from its ancient history to modern practices."
         ),
         jsonData.map((card) => {
@@ -259,14 +275,14 @@ function transformForSeed(src) {
     case 'nature':
       const newJSONData_Nature = new ContentBlock(
         "Explore Georgia's Natural Wonders",
-        new paragraphBlock(
+        new ParagraphBlock(
           'From soaring Caucasus peaks to lush Black Sea coastlines, Georgia’s landscapes offer unparalleled diversity. Discover ancient forests, hidden caves, vibrant wetlands, and more in this guide to the country’s most breathtaking natural destinations.'
         ),
         jsonData.map((card) => {
           return new StructuredCard({
             title: card.title,
             description: card.content.map((content) => {
-              return new paragraphBlock(
+              return new ParagraphBlock(
                 content.text
               )
             }) || '',
@@ -284,13 +300,13 @@ function transformForSeed(src) {
     case 'adventures':
       const newJSONData_Adventures = new ContentBlock(
         jsonData[0].title || "Adventures in Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           jsonData[0].intro || "Discover thrilling adventures in Georgia, from hiking in the Caucasus mountains to exploring ancient caves."
         ),
         jsonData.map((card) => {
           return new StructuredCard({
             title: card.name || '',
-            description: new paragraphBlock(
+            description: new ParagraphBlock(
               card.description || ''
             ),
             img_src: card.imageSrc || '',
@@ -308,13 +324,13 @@ function transformForSeed(src) {
     case 'cuisine':
       const newJSONData_Cuisine = new ContentBlock(
         jsonData[0].page.title || "Cuisine of Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           jsonData[0].page.intro || "Explore the rich and diverse cuisine of Georgia, known for its unique flavors and traditional dishes."
         ),
         jsonData[0].page.sections.map((section) => {
           return new StructuredCard({
             title: section.title || '',
-            description: new paragraphBlock(
+            description: new ParagraphBlock(
               section.description || ''
             ),
             img_src: section.img_src || '',
@@ -333,13 +349,13 @@ function transformForSeed(src) {
     case 'guide':
       const newGuidePage = new ContentBlock(
         "Guided Tours in Georgia",
-        new paragraphBlock(
+        new ParagraphBlock(
           "Discover the best guided tours in Georgia, from cultural experiences to adventure activities."
         ),
         jsonData.map((card) => {
           return new StructuredCard({
             title: card.name,
-            description: new paragraphBlock(
+            description: new ParagraphBlock(
               card.intro || ''
             ),
             img_src: card.imageSrc || '',
@@ -358,13 +374,13 @@ function transformForSeed(src) {
       const newJSONData_Health = jsonData.map((card) => {
         return new ContentBlock(
           card.title || "Health and Wellness in Georgia",
-          new paragraphBlock(
+          new ParagraphBlock(
             card.intro || "Explore health and wellness options in Georgia, from traditional remedies to modern practices."
           ),
           card.options.map((option) => {
             return new StructuredCard({
               title: option.subtext || '',
-              description: new paragraphBlock(
+              description: new ParagraphBlock(
                 option.description || ''
               ),
               img_src: option.imageSrc || '',
@@ -383,7 +399,7 @@ function transformForSeed(src) {
           }),
           card.imageSrc || '',
           card.imageAlt || '',
-          new paragraphBlock(
+          new ParagraphBlock(
             card.description || ''
           )
         );
@@ -402,17 +418,20 @@ function transformForSeed(src) {
       };
       const newJSONData_Nightlife = new ContentBlock(
         'Experience Georgia After Dark',
-        new paragraphBlock(
+        new ParagraphBlock(
           'Dive into Georgia’s vibrant nightlife, where ancient streets pulse with modern beats and every corner hides a new adventure. From Tbilisi’s underground techno temples to Batumi’s beach-side dance floors, the night is yours to explore.'
         ),
         nightlifeTransform.map((content) => {
-          return new ContentBlock(
-            content.title,
-            '',
-            content.content.map((card) => {
+          return new StructuredCard({
+            title: content.title,
+            description: '',
+            img_src: '',
+            img_alt: '',
+            items: new listBlock(
+              content.content.map((card) => {
               return new StructuredCard({
                 title: card.name,
-                description: new paragraphBlock(
+                description: new ParagraphBlock(
                   card.description
                 ),
                 img_src: card.img_src || '',
@@ -424,7 +443,8 @@ function transformForSeed(src) {
                 footer: card.footer || ''
               });
             })
-          );
+            )
+          });
         })
       );
       jsonData.length = 0;
@@ -434,11 +454,11 @@ function transformForSeed(src) {
     case 'wine':
       const newJSONData_Wine = new ContentBlock(
         jsonData[0].page.title || "A Connoisseur's Guide to Regional Georgian Wines",
-        jsonData[0].page.intro || "Georgia’s winemaking tradition spans 8,000 years, making it the world’s oldest wine culture. Over 525 indigenous grape varieties thrive here, and winemaking blends ancient Qvevri methods with modern techniques. From the fertile Alazani Valley in the east to the humid Black Sea coast, each region has a distinct terroir and wine personality.",
+        new ParagraphBlock(jsonData[0].page.intro || "Georgia’s winemaking tradition spans 8,000 years, making it the world’s oldest wine culture. Over 525 indigenous grape varieties thrive here, and winemaking blends ancient Qvevri methods with modern techniques. From the fertile Alazani Valley in the east to the humid Black Sea coast, each region has a distinct terroir and wine personality."),
         jsonData[0].page.sections.map((section) => {
           return new StructuredCard({
             title: section.title || '',
-            description: new paragraphBlock(section.intro) || '',
+            description: new ParagraphBlock(section.intro) || '',
             img_src: section.img_url || '',
             img_alt: section.img_alt || '',
             items: [
@@ -452,7 +472,7 @@ function transformForSeed(src) {
               ),
               new listBlock(
                 section.wines.map((wine) => {
-                  return new paragraphBlock(
+                  return new ParagraphBlock(
                     wine.description,
                     wine.name
                   )
@@ -489,17 +509,6 @@ const georgiaData = loadAllJson(INPUT_DIR);
 // const OUTPUT_PATH = path.join(process.cwd(), 'data', 'georgia', 'seeded.json');
 const seededData = georgiaData.map(transformForSeed);
 
-
-
-
-
-
-console.log(seededData); // Example to check the structure
-
-
-
-
-
 async function upsertTopic(client, topicName) {
     const slug = topicName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
     const res = await client.query(
@@ -510,7 +519,6 @@ async function upsertTopic(client, topicName) {
     );
     return res.rows[0].id;
 }
-
 
 // --- MAIN SEEDING LOGIC ---
 async function main() {
@@ -549,72 +557,29 @@ console.log('✅ Connected to the database.');
         );
         console.log(`  - Associated with topic: "${topicName}" (ID: ${topicId})`);
     }
-
-    // Read the content cards from the associated JSON file
-    const cards = await readJsonFile(pageData.jsonData);
-
-    let orderCounter = 0; // To maintain the order of blocks on the page
-
-    // Loop through each "card" in the JSON file
-
-    for (const card of cards) {
-      console.log(`  - Processing card: "${card.title}"`);
-      
-      // Insert the card title as a heading
-      await client.query(
-        `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
-         VALUES ($1, 'heading_h2', $2, $3)`,
-        [pageId, JSON.stringify({ text: card.title }), orderCounter++]
-      );
-      
-      // Insert the image if it exists
-      if (card.img_src) {
-        await client.query(
-            `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
-             VALUES ($1, 'image', $2, $3)`,
-            [pageId, JSON.stringify({ image_path: card.img_src, alt_text: card.img_alt }), orderCounter++]
-        );
-      }
-      
-      // Insert the description blocks
-      for (const block of card.description) {
-        await client.query(
-          `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
-           VALUES ($1, $2, $3, $4)`,
-          [pageId, block.type, JSON.stringify(block), orderCounter++]
-        );
-      }
-      
-      // Insert the main content blocks
-      if (card.content.type === 'structured_card') {
-        for (const structuredCard of card.content.structured_card) {
-          await client.query(
-            `INSERT INTO structured_cards (page_id, card_title, card_description, items, img_src, img_alt, order_on_page)
-             VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-            [pageId, structuredCard.title, structuredCard.description, JSON.stringify(structuredCard.items || []), structuredCard.img_src || null, structuredCard.img_alt || null, orderCounter++]
-          );
+      for (const card of pageData.jsonData) {
+        console.log(`  - Processing card: "${card.title}"`);
+        const blocks = normalizeCard(card);
+        for (const blk of blocks) {
+          if (blk.type === 'structured_card') {
+            const sc = blk.payload;
+            await client.query(
+              `INSERT INTO structured_cards
+                 (page_id, card_title, card_description, items, img_src, img_alt, order_on_page)
+               VALUES ($1, $2, $3, $4, $5, $6, $7)`,
+              [pageId, sc.title, sc.description, JSON.stringify(sc.items), sc.img_src, sc.img_alt, blk.order]
+            );
+          } else {
+            await client.query(
+              `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
+               VALUES ($1, $2, $3, $4)`,
+              [pageId, blk.type, JSON.stringify(blk.payload), blk.order]
+            );
+          }
         }
       }
-      for (const block of card.content) {
-        await client.query(
-          `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
-           VALUES ($1, $2, $3, $4)`,
-          [pageId, block.type, JSON.stringify(block), orderCounter++]
-        );
-      }
-      
-      // Insert the footer link as a paragraph
-      if (card.footer) {
-        const footerText = `Read more: <a href="${card.footer}">Explore further</a>`;
-        await client.query(
-          `INSERT INTO content_blocks (page_id, type, content_data, order_on_page)
-           VALUES ($1, 'paragraph', $2, $3)`,
-          [pageId, JSON.stringify({ text: footerText }), orderCounter++]
-        );
-      }
-    }
-    
-      console.log(`✅ Successfully seeded page: "${pageData.title}" with ID: ${pageId}`);
+
+      console.log(`✅ Successfully seeded page: "${pageData.title}"`);
     }
     // --- END OF SEEDING A SINGLE PAGE ---
 
@@ -631,6 +596,6 @@ console.log('✅ Connected to the database.');
   }
 }
 
-// // Run the main function
-// main().catch(console.error);
+// Run the main function
+main().catch(console.error);
 
