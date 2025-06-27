@@ -1,0 +1,198 @@
+{
+  "page": {
+    "title": "A Connoisseur's Guide to Regional Georgian Wines",
+    "intro": "Georgia’s winemaking tradition spans 8,000 years, making it the world’s oldest wine culture. Over 525 indigenous grape varieties thrive here, and winemaking blends ancient Qvevri methods with modern techniques. From the fertile Alazani Valley in the east to the humid Black Sea coast, each region has a distinct terroir and wine personality.",
+    "sections": [
+      {
+        "id": "kakheti",
+        "title": "Kakheti",
+        "intro": "Kakheti, eastern Georgia’s wine heartland, has fertile Alazani and Iori valleys with limestone and loess soils. Its climate and deep viticultural history define its rich, structured wines.",
+        "grape_varieties": [
+          "Rkatsiteli",
+          "Kakhuri Mtsvane",
+          "Kisi",
+          "Khikhvi",
+          "Saperavi",
+          "Jghia"
+        ],
+        "winemaking_methods": {
+          "traditional": "Qvevri fermentation and aging for up to six months in buried clay amphorae.",
+          "modern": "Stainless-steel and oak barrel fermentation, sparkling pet-nat, and European-style techniques."
+        },
+        "wines": [
+          {
+            "name": "Tsinandali",
+            "description": "Dry white blend of Rkatsiteli and Mtsvane, crisp with floral and green apple notes."
+          },
+          {
+            "name": "Mukuzani",
+            "description": "Oak-aged Saperavi red, powerful dark fruit, spice, and firm tannins."
+          },
+          {
+            "name": "Kindzmarauli",
+            "description": "Semi-sweet Saperavi with red-berry liqueur sweetness and velvety texture."
+          },
+          {
+            "name": "Kisi Qvevri",
+            "description": "Amber white with savory pear notes and tobacco aroma from skin contact aging."
+          },
+          {
+            "name": "Khikhvi Qvevri",
+            "description": "Full-bodied amber wine with apricot, honey, and exotic herb notes."
+          }
+        ],
+        "wineries": [
+          "Telavi Wine Cellar",
+          "Pheasant’s Tears",
+          "Shumi (for biodynamic and sparkling)",
+          "Alaverdi Monastery Marani",
+          "Khareba Wine Complex"
+        ],
+        "img_url": "https://example.com/images/kakheti.jpg"
+      },
+      {
+        "id": "kartli",
+        "title": "Kartli",
+        "intro": "Central Georgia’s Kartli region has moderate plains and fertile loam soils. It favors European-style wines and sparkling, but preserves Qvevri tradition.",
+        "grape_varieties": [
+          "Chinuri",
+          "Goruli Mtsvane",
+          "Tavkveri",
+          "Shavkapito"
+        ],
+        "winemaking_methods": {
+          "traditional": "Qvevri fermentation for select blends.",
+          "modern": "Stainless-steel, oak barrel aging, traditional method sparkling."
+        },
+        "wines": [
+          {
+            "name": "Atenuri PDO",
+            "description": "Sparkling white blend of Chinuri and Goruli Mtsvane, crisp and zesty."
+          },
+          {
+            "name": "Chinuri Still",
+            "description": "Straw-yellow wine with herbal mint and green pear aromas."
+          },
+          {
+            "name": "Kartli Red Blend",
+            "description": "Light red from Tavkveri and Shavkapito, cherry-spice character with gentle tannins."
+          }
+        ],
+        "wineries": [
+          "Chateau Mukhrani",
+          "Ori Marani",
+          "Tbilvino Cellars"
+        ],
+        "img_url": "https://example.com/images/kartli.jpg"
+      },
+      {
+        "id": "imereti",
+        "title": "Imereti",
+        "intro": "West-central Georgia’s Imereti has a humid-subtropical climate, varied soils, and a unique short-term skin fermentation (‘Churi’) giving lighter amber wines.",
+        "grape_varieties": [
+          "Tsitska",
+          "Tsolikouri",
+          "Krakhuna",
+          "Otskhanuri Sapere",
+          "Dzelshavi"
+        ],
+        "winemaking_methods": {
+          "traditional": "Short Qvevri skin contact (‘Churi’) for weeks.",
+          "modern": "Stainless steel and small oak for fresh whites and rosés."
+        },
+        "wines": [
+          {
+            "name": "Tsitska–Tsolikouri Blend",
+            "description": "Pale gold white with floral, melon hints and saline minerality."
+          },
+          {
+            "name": "Tsolikouri",
+            "description": "Straw-colored wine with citrus and white plum aromas."
+          },
+          {
+            "name": "Krakhuna",
+            "description": "Late-ripening white with apricot, banana, and honey notes."
+          },
+          {
+            "name": "Otskhanuri Sapere Red",
+            "description": "Deep red wine with forest fruit and firm tannins."
+          },
+          {
+            "name": "Tvishi",
+            "description": "Semi-sweet white from high-altitude Tsolikouri, golden and peachy."
+          }
+        ],
+        "wineries": [
+          "Teliani Valley (Zestafoni cellar)",
+          "Jito’s Gardens",
+          "Local family marani near Gelati Monastery"
+        ],
+        "img_url": "https://example.com/images/imereti.jpg"
+      },
+      {
+        "id": "racha-lechkhumi",
+        "title": "Racha-Lechkhumi",
+        "intro": "Mountainous Racha’s high-altitude vineyards on calcareous soils yield distinct semi-sweet reds and elegant whites.",
+        "grape_varieties": [
+          "Aleksandrouli",
+          "Mujuretuli",
+          "Tsolikouri"
+        ],
+        "winemaking_methods": {
+          "traditional": "Terroir-driven foot-treading and Qvevri for Khvanchkara.",
+          "modern": "Stainless-steel fermentation for dry styles."
+        },
+        "wines": [
+          {
+            "name": "Khvanchkara",
+            "description": "Protected semi-sweet red blend of Aleksandrouli and Mujuretuli, with raspberry, cherry, and honey flavors."
+          },
+          {
+            "name": "Tvishi White",
+            "description": "Semi-sweet Tsolikouri, apricot, melon, and delicate honey flavors."
+          },
+          {
+            "name": "Dry Aleksandrouli",
+            "description": "Light red with black-fruit and earthy notes."
+          }
+        ],
+        "wineries": [
+          "Vakhtang Aslanikashvili Winery",
+          "Royal Khvanchkara",
+          "Bugeuli Winery"
+        ],
+        "img_url": "https://example.com/images/racha-lechkhumi.jpg"
+      },
+      {
+        "id": "adjara-&-guria",
+        "title": "Adjara & Guria",
+        "intro": "Georgia’s Black Sea coast with humid climate produces aromatic reds and rosés, historically trained on trees to avoid ground moisture.",
+        "grape_varieties": [
+          "Ojaleshi",
+          "Chkhaveri",
+          "Tsolikouri (west)"
+        ],
+        "winemaking_methods": {
+          "traditional": "Small-scale cellar Qvevri often abandoned for humidity control.",
+          "modern": "Clean-room stainless fermentation, some sparkling and sun-dried dessert styles."
+        },
+        "wines": [
+          {
+            "name": "Ojaleshi Red",
+            "description": "Herbal spicy red with strawberry, black pepper, and cedar notes."
+          },
+          {
+            "name": "Chkhaveri Rosé",
+            "description": "Soft salmon pink rosé with strawberry jam and lychee perfume."
+          }
+        ],
+        "wineries": [
+          "Baia’s Wine (Adjara)",
+          "Batumi urban wine bars",
+          "Local family marani in Guria"
+        ],
+        "img_url": "https://example.com/images/adjara-&-guria.jpg"
+      }
+    ]
+  }
+}

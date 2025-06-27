@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "section": "Balneotherapy",
+    "intro": "Healing and relaxation through Georgia’s renowned mineral-rich waters in scenic settings.",
+    "description": "Balneotherapy—derived from the Latin balneum, meaning “bath”—is the therapeutic use of natural mineral or thermal waters, muds, and gases, practiced for thousands of years across cultures. Ancient Egyptians and Greeks used hot springs for healing, while the Romans institutionalized the practice with grand public thermae for both medical and social purposes. The process typically involves immersion in mineral-rich water, often heated to 35–42 °C, combined with complementary treatments such as mud packs, carbon dioxide or radon gas baths, hydro-massage, and steam therapy. Modern applications are evidence-based: balneotherapy has shown benefits in treating musculoskeletal issues like osteoarthritis and chronic back pain, dermatological conditions such as eczema and psoriasis, and cardiovascular or metabolic disorders. It also plays a significant role in stress reduction and mental health, helping to regulate the nervous system through thermal immersion and relaxation. In regions like Georgia, balneotherapy remains deeply rooted in culture, with natural springs in areas like Borjomi, Tskaltubo, and Sairme continuing to draw visitors for their reputed healing qualities. These sites often combine traditional mineral bathing with contemporary wellness programs, creating a holistic therapeutic experience that spans both ancient ritual and modern science.",
+    "imageSrc": "/tour-pictures/health-relax/balneotherapy/balneotherapy.jpg",
+    "imageAlt": "Open-air mineral bath surrounded by greenery",
+    "options": [
+      {
+        "id": 1,
+        "subtext": "Sulfur baths",
+        "description": "Immersive sulfur pools followed by traditional kisa scrubs and Georgian-style massage.",
+        "imageSrc": "/tour-pictures/sulphurbath.jpg",
+        "imageAlt": "Domed interior of a sulfur bathhouse",
+        "locations": [
+          {
+            "id": 101,
+            "location": "Tbilisi",
+            "name": "Orbeliani Baths",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/sulfur-bath/sulfur-baths.jpg",
+            "imageAlt": "Private sulfur pool with vaulted ceiling"
+          },
+          {
+            "id": 102,
+            "location": "Borjomi",
+            "name": "Borjomi Thermal Baths",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/sulfur-bath/borjomi-sulfur.jpg",
+            "imageAlt": "Outdoor sulfur pools set against forested hills"
+          },
+          {
+            "id": 103,
+            "location": "Tbilisi",
+            "name": "Bathhouse #5",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/sulfur-bath/bathhouse-5.jpg",
+            "imageAlt": "Public sulfur pool in Bathhouse #5, Tbilisi"
+          },
+          {
+            "id": 104,
+            "location": "Tbilisi",
+            "name": "Chreli Abano Baths",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/sulfur-bath/chreli-abano.jpg",
+            "imageAlt": "Chreli Abano private pool setting"
+          },
+          {
+            "id": 105,
+            "location": "Samtskhe",
+            "name": "Abastumani Sulfur Pool",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/sulfur-bath/abastumani.jpg",
+            "imageAlt": "Steamy spring emerging from forested hillside"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "subtext": "Natural Water Springs",
+        "description": "Soak in pristine, geothermally heated pools at remote spring sites.",
+        "imageSrc": "/tour-pictures/spring-water.jpg",
+        "imageAlt": "Steaming natural hot spring beside rocky terrain",
+        "locations": [
+          {
+            "id": 201,
+            "location": "Tskaltubo",
+            "name": "Dikhashkho Vani Hot Geyser",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/natural-spring/dikhashkho.jpg",
+            "imageAlt": "Bubbling thermal vent in a rocky spring pool"
+          },
+          {
+            "id": 202,
+            "location": "Kazbegi",
+            "name": "Pansheti Natural Swimming Pool",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/natural-spring/pansheti.jpg",
+            "imageAlt": "Natural swimming pool with mountain backdrop"
+          },
+          {
+            "id": 203,
+            "location": "Lechkhumi",
+            "name": "Okrinishi fountain",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/natural-spring/lailashi.jpg",
+            "imageAlt": "Natural mineral water in a forest clearing"
+          },
+          {
+            "id": 204,
+            "location": "Samegrelo-Zemo Svaneti",
+            "name": "Nokalakevi Sulfur Hot Spring",
+            "imageSrc": "/tour-pictures/health-relax/balneotherapy/natural-spring/nokalakevi.png",
+            "imageAlt": "Bubbling thermal vent in a rocky spring pool"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "section": "SPA Resort",
+    "intro": "Modern and traditional spa resorts offering full wellness programs in luxury and mid-range settings.",
+    "description": "Spa resorts trace their origins to ancient thermal sanctuaries, where early civilizations—from the Greeks’ Asclepieia to Rome’s grand thermae—combined bathing with health, leisure, and social ritual. By the Middle Ages, Europe’s mineral springs gave rise to spa towns like Bath in England and Baden-Baden in Germany, where “taking the waters” was prescribed for everything from digestive woes to rheumatism. In the 19th century, hydrotherapy pioneers such as Sebastian Kneipp introduced alternating hot-and-cold water treatments and jet-shower therapies, cementing the spa’s role as a medical retreat. In Georgia, this venerable tradition lives on in resorts like Borjomi Likani and Sairme, where naturally carbonated and mineral-rich springs feed luxurious baths set amid pine forests and mountain vistas. Today’s spa resorts—whether in the Caucasus highlands or on the Black Sea coast—build on centuries of healing ritual by pairing historic thermal waters with modern wellness amenities: hydrotherapy circuits, therapeutic mud rooms, signature massages, and holistic programs that include yoga, nutrition counseling, and mindfulness, creating comprehensive destinations that honor both ancient practice and contemporary science.",
+    "imageSrc": "/tour-pictures/health-relax/spa-resort/spa-resort.jpg",
+    "imageAlt": "Spa reception with relaxing ambiance",
+    "options": [
+      {
+        "id": 1,
+        "subtext": "Resort Spa",
+        "description": "Comprehensive spa treatments—from massages to herbal therapies—in full-service resort facilities.",
+        "imageSrc": "/tour-pictures/spa2.jpg",
+        "imageAlt": "Massage room with ambient lighting",
+        "locations": [
+          {
+            "id": 301,
+            "location": "Kakheti",
+            "name": "Lopota Lake Resort & Spa",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/lopota.jpg",
+            "imageAlt": "Lakeside spa pools at sunset"
+          },
+          {
+            "id": 302,
+            "location": "Imereti",
+            "name": "Sairme Highland Resort",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/sairme.webp",
+            "imageAlt": "Mountain spa complex surrounded by spruce forest"
+          },
+          {
+            "id": 303,
+            "location": "Borjomi",
+            "name": "Borjomi Likani Resort & Spa",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/likani.jpg",
+            "imageAlt": "Borjomi Likani spa pool"
+          },
+          {
+            "id": 304,
+            "location": "Borjomi",
+            "name": "Borjomi Palace Health & Spa Center",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/borjomi-palace.jpg",
+            "imageAlt": "Borjomi Palace spa exterior"
+          },
+          {
+            "id": 305,
+            "location": "Tsikhisdziri",
+            "name": "Castello Mare Hotel & Wellness Resort",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/kobuleti-castello.jpg",
+            "imageAlt": "Seaside spa pools"
+          },
+          {
+            "id": 306,
+            "location": "Shekvetili",
+            "name": "Paragraph Resort & Spa Shekvetili",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/shekvetili.jpg",
+            "imageAlt": "Forest spa resort near sea"
+          },
+          {
+            "id": 307,
+            "location": "Kobuleti",
+            "name": "Georgia Palace Hotel & Spa",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/georgia-palace.jpg",
+            "imageAlt": "Georgia Palace spa interior"
+          },
+          {
+            "id": 308,
+            "location": "Kobuleti",
+            "name": "Pearl of Sea Hotel & Spa",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/pearl-kobuleti.jpg",
+            "imageAlt": "Pearl of Sea rooftop spa"
+          },
+          {
+            "id": 309,
+            "location": "Ureki",
+            "name": "Kolkhida Resort & Spa",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/kolkhida-ureki.jpg",
+            "imageAlt": "Kolkhida spa pool with palm trees"
+          },
+          {
+            "id": 310,
+            "location": "Tskaltubo",
+            "name": "Tskaltubo Spa Resort",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/tskaltubo-legends.jpg",
+            "imageAlt": "Tskaltubo spa resort exterior"
+          },
+          {
+            "id": 311,
+            "location": "Tskaltubo",
+            "name": "Tskaltubo Plaza Hotel",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/spa/tskaltubo-plaza.jpg",
+            "imageAlt": "Tskaltubo Plaza Hotel spa area"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "subtext": "Nature and Camp Retreats",
+        "description": "Eco-friendly camps and lodges offering guided forest walks, outdoor yoga, and simple spa services.",
+        "imageSrc": "/tour-pictures/nature-resort.jpg",
+        "imageAlt": "Tented wellness camp among pine trees",
+        "locations": [
+          {
+            "id": 401,
+            "location": "Mtskheta",
+            "name": "Jewelberry Glamping",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/jewelberry-glamping-hotel.jpg",
+            "imageAlt": "Luxury geo-dome cabin with private hot tub"
+          },
+          {
+            "id": 402,
+            "location": "Lagodekhi",
+            "name": "Eco Village in the Forest",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/eco-lagodekhi.jpg",
+            "imageAlt": "Wooden forest hut with outdoor spa facilities"
+          },
+          {
+            "id": 403,
+            "location": "Mtirala National Park",
+            "name": "Door2Heaven Eco Hotel",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/forest-batumi.webp",
+            "imageAlt": "Bungalow among forest canopy with yoga deck"
+          },
+          {
+            "id": 404,
+            "location": "Stepantsminda",
+            "name": "Kazbegi Glamping",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/kazbegi-glamping.jpg",
+            "imageAlt": "Canvas eco-cabin overlooking Mount Kazbek"
+          },
+          {
+            "id": 405,
+            "location": "Ambrolauri",
+            "name": "Glamping Georgia Krikhi",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/krikhi-glamping.jpg",
+            "imageAlt": "Luxury tent with infinity pool view"
+          },
+          {
+            "id": 406,
+            "location": "Mestia",
+            "name": "Ecohouse Svaneti",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/camp/ecohouse-svaneti.jpg",
+            "imageAlt": "Cozy log-cabin lodge with mountain backdrop"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "subtext": "Luxury Hotel",
+        "description": "High-end hotel spas with signature treatments, private suites, and refined ambiance.",
+        "imageSrc": "/tour-pictures/fancy-hotel.jpg",
+        "imageAlt": "Elegant hotel spa lounge",
+        "locations": [
+          {
+            "id": 501,
+            "location": "Tbilisi",
+            "name": "Sheraton Grand Metechi Palace",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/sheraton.jpg",
+            "imageAlt": "Sheraton Grand Metechi Palace exterior"
+          },
+          {
+            "id": 502,
+            "location": "Tbilisi",
+            "name": "Paragraph Freedom Square",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/paragraph-freedom.jpg",
+            "imageAlt": "Paragraph Freedom Square hotel facade"
+          },
+          {
+            "id": 503,
+            "location": "Tbilisi",
+            "name": "Rooms Hotel Tbilisi",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/rooms-hotel-tbilisi.jpg",
+            "imageAlt": "Rooms Hotel Tbilisi lobby area"
+          },
+          {
+            "id": 504,
+            "location": "Tbilisi",
+            "name": "Stamba Hotel",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/stamba.jpg",
+            "imageAlt": "Stamba Hotel unique print press architecture"
+          },
+          {
+            "id": 505,
+            "location": "Tbilisi",
+            "name": "Swissôtel Tbilisi Pürovel Spa & Sport",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/swissotel.jpg",
+            "imageAlt": "Swissôtel Pürovel Spa pool"
+          },
+          {
+            "id": 506,
+            "location": "Batumi",
+            "name": "Le Méridien Batumi",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/sheraton.jpg",
+            "imageAlt": "Le Méridien Batumi at dusk with sea view"
+          },
+          {
+            "id": 507,
+            "location": "Batumi",
+            "name": "Sheraton Grand Batumi",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/sheraton.jpg",
+            "imageAlt": "Sheraton Grand Batumi beachfront facade"
+          },
+          {
+            "id": 508,
+            "location": "Batumi",
+            "name": "Radisson Blu Leogrand",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/radisson.jpg",
+            "imageAlt": "Radisson Blu Leogrand glass atrium"
+          },
+          {
+            "id": 509,
+            "location": "Stepantsminda",
+            "name": "Rooms Hotel Kazbegi",
+            "imageSrc": "/tour-pictures/health-relax/spa-resort/hotel/rooms-hotel-kazbegi.jpg",
+            "imageAlt": "Rooms Hotel Kazbegi pool overlooking mountains"
+          }
+        ]
+      }
+    ]
+  }
+]
+

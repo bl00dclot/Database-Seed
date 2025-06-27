@@ -1,0 +1,129 @@
+[
+  {
+    "title": "Location & Overview",
+    "description": null,
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Georgia is a country at the crossroads of Eastern Europe and Western Asia, nestled between the Black Sea, Russia, Turkey, Armenia, and Azerbaijan. Covering about 69,700 km², it is famed for its dramatic Caucasus mountains and lush lowlands. The capital, Tbilisi, is home to over a third of its roughly 3.7 million people. Renowned as one of the world’s oldest wine regions, Georgia’s modern culture reflects millennia of history and hospitality."
+      }
+    ],
+    "footer": "",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Essential Facts",
+    "description": [
+      {
+        "type": "list",
+        "items": [
+          "Population: ~3.7 million",
+          "Capital: Tbilisi (თბილისი)",
+          "Language: Georgian (ქართული), plus Russian and widely understood English in urban areas",
+          "Currency: Georgian Lari (GEL)",
+          "Time Zone: UTC+4 (no daylight saving)",
+          "Visa/Entry: Visa-free for many countries (often up to 1 year) – check official sources",
+          "Emergency: Dial 112 for police, fire, or medical"
+        ]
+      }
+    ],
+    "content": null,
+    "footer": "",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Geography & Climate",
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "From the humid Black Sea coast in the west to the continental interiors of Tbilisi and Kakheti, and up to alpine heights in the Caucasus, Georgia’s climate zones vary dramatically:"
+      }
+    ],
+    "content": [
+      {
+        "type": "list",
+        "items": [
+          "Western Georgia (Black Sea): Subtropical, wet winters and warm summers.",
+          "Eastern Georgia (Tbilisi/Kakheti): Hot, dry summers and cooler winters.",
+          "Mountain Regions: Alpine conditions; heavy snow in winter, cool summers."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Best time to visit: April–June and September–October for mild weather, blossoming spring, or autumn foliage."
+      }
+    ],
+    "footer": "/nature",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Culture & Etiquette",
+    "description": null,
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Georgians are world-famous for hospitality—“Every guest is a gift from God.” Greetings often include a handshake and direct eye contact; acquaintances may exchange a light kiss on the cheek. Use simple phrases: gamarjoba (გამარჯობა) for “hello” and madloba (მადლობა) for “thank you.” Dress modestly when entering homes or churches, and remove your shoes in private dwellings. Dining customs revolve around the supra, a grand feast led by a toastmaster (tamada). Wait for the tamada’s toast before drinking, hold your glass with both hands, and maintain eye contact. It’s polite to accept at least a small taste of any food or drink offered. Tipping around 10% is customary in restaurants."
+      }
+    ],
+    "footer": "/culture",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Safety & Practical Tips",
+    "description": null,
+    "content": [
+      {
+        "type": "list",
+        "items": [
+          "Georgia is generally safe; watch for petty theft in crowded areas.",
+          "Avoid travel to Abkhazia and South Ossetia (conflict zones).",
+          "Health care is best in major cities; travel insurance is recommended.",
+          "Tap water is usually safe in cities; bottled water is widely available.",
+          "ATMs and credit cards (Visa/Mastercard) are common in urban centers."
+        ]
+      }
+    ],
+    "footer": "",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Transportation & Connectivity",
+    "description": null,
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "In cities, use licensed taxis or ride-hail apps (e.g., Bolt). Tbilisi’s metro and bus network are affordable (~1 GEL). For intercity travel, marshrutkas (minibuses) and trains connect major towns. Renting a car offers flexibility but be cautious on mountain roads. Internet & SIM: Free Wi-Fi is widespread; for full coverage buy a local SIM (Magti, Silknet/Geocell) at airports or kiosks. Tourist SIM packages include data and minutes."
+      }
+    ],
+    "footer": "",
+    "img_src": "",
+    "img_alt": ""
+  },
+  {
+    "title": "Best Times & Ideal Travelers",
+    "description": null,
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Georgia appeals to a range of visitors:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Adventure seekers: Hiking, mountaineering, skiing in the Caucasus.",
+          "Wine & food lovers: Traditional feasts and 8,000-year-old qvevri wines in Kakheti.",
+          "History buffs: UNESCO sites like Mtskheta, Gelati Monastery, and Svaneti tower villages.",
+          "Beachgoers: Black Sea resorts near Batumi in summer."
+        ]
+      }
+    ],
+    "footer": "",
+    "img_src": "",
+    "img_alt": ""
+  }
+]

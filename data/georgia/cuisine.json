@@ -1,0 +1,285 @@
+{
+  "page": {
+    "title": "A Gourmet Journey Through Regional Georgian Cuisine",
+    "intro": "Explore the rich and diverse flavors of Georgia through the lens of its distinct regions. From the wine-soaked valleys of Kakheti to the alpine pastures of Tusheti, discover traditional dishes, hidden gems, and where to taste them authentically.",
+    "sections": [
+      {
+        "id": "kakheti",
+        "title": "Kakheti",
+        "intro": "Kakheti is Georgia’s famed wine country – rolling vineyards, oak-smoked Saperavi reds and amber Rkatsiteli whites – and its hearty cuisine reflects that abundance. Meat is king here, often paired with tangy vinegars and aromatics. The region gave birth to tonis puri (დონერი პური), a rustic bread baked in a deep clay oven (tone). Kakhetian table staples include grilled meats and rich stews.",
+        "dishes": [
+          {
+            "name": "Mtsvadi",
+            "description": "Juicy pork, beef, or lamb skewers marinated in garlic, coriander, and local spices, charred over an open fire and dipped in tangy plum sauce (tkemali)."
+          },
+          {
+            "name": "Chakapuli",
+            "description": "Spring lamb stew simmered with green tarragon, cilantro, spring onions, and tart green plums, celebrated during Easter."
+          },
+          {
+            "name": "Khinkali",
+            "description": "Soup dumplings filled with a mixture of meat (traditionally pork and beef), enjoyed by sipping the broth first and then eating the dough and filling."
+          },
+          {
+            "name": "Chikhirtma",
+            "description": "Silky chicken soup thickened with beaten eggs and soured with vinegar, a popular hangover cure."
+          },
+          {
+            "name": "Churchkhela",
+            "description": "Strings of walnuts dipped in boiled grape must (tatara) and dried into sausage-like candies, a staple at harvest and New Year."
+          }
+        ],
+        "venues": [
+          "Telavi and Kvareli wine-route taverns",
+          "Radisson Tsinandali Estate",
+          "Riverside mtsvadi shacks",
+          "Hilltop cellars in Signagi"
+        ],
+        "img_src": "https://example.com/images/kakheti.jpg",
+        "img_alt": "Kakheti"
+      },
+      {
+        "id": "imereti",
+        "title": "Imereti",
+        "intro": "Imereti’s lush valleys and orchards yield a cuisine built on walnuts, cheese and cereals. Influenced by neighboring Guria, Imeretian dishes use ground walnuts, fragrant herbs and hearty grains. The classic Imeruli cheese bread (khachapuri) is made here, but the region also boasts its own spin on many national dishes. An assortment of pkhali and accompaniments is collectively called “gobi,” symbolizing friendship at the table. Local cheeses abound and wild mushrooms add earthy depth.",
+        "dishes": [
+          {
+            "name": "Pkhali",
+            "description": "Chilled walnut-vegetable pâtés made from spinach, beet tops, or cabbage, blended with walnuts, garlic, fenugreek, and vinegar, garnished with pomegranate seeds."
+          },
+          {
+            "name": "Mchadi",
+            "description": "Golden cornmeal flatbreads, dense and slightly sweet, served with cheese or soups."
+          },
+          {
+            "name": "Badrijani Nigvzit",
+            "description": "Fried eggplant rolls stuffed with spiced walnut paste and topped with pomegranate seeds."
+          },
+          {
+            "name": "Kuchmachi",
+            "description": "Liver stew of chicken or pork livers sautéed with onions, cilantro, garlic, and rich walnut-pomegranate sauce."
+          },
+          {
+            "name": "Lobio",
+            "description": "Spiced red bean stew flavored with blue fenugreek and marigold, served soupy or baked with a cheese crust."
+          },
+          {
+            "name": "Imeruli Khachapuri",
+            "description": "Round cheese bread filled with Imeretian sulguni cheese."
+          }
+        ],
+        "venues": [
+          "Gala in Kutaisi",
+          "Rustic wineries near Borjomi",
+          "Family-run supras near Gelati Monastery"
+        ],
+        "img_src": "https://example.com/images/imereti.jpg",
+        "img_alt": "Imereti"
+      },
+      {
+        "id": "samegrelo",
+        "title": "Samegrelo",
+        "intro": "Samegrelo (Megrelia) is the spice-loving heart of Georgia. Megrelian cooks liberally use hot red pepper paste (ajika), aromatic coriander and, of course, walnuts. Cornmeal (ghomi) and cheese (Sulguni) are also regional signatures. The cuisine here is known for bold, spicy flavors and comfort dishes that center around cornmeal porridge and cheese-enriched grits.",
+        "dishes": [
+          {
+            "name": "Ghomi & Elarji",
+            "description": "Cornmeal porridge (ghomi) and its cheese-enriched version (elarji) served with meats or stews."
+          },
+          {
+            "name": "Megrelian Khachapuri",
+            "description": "Cheese bread with extra sulguni cheese piled on top of the filled loaf."
+          },
+          {
+            "name": "Ajika-spiced Chicken Tabaka",
+            "description": "Pan-seared chicken under a weight, slathered with fiery Megrelian ajika."
+          },
+          {
+            "name": "Megrelian Kharcho",
+            "description": "Smoky beef-and-tomato stew thickened with walnuts and fenugreek, often spiced with ajika."
+          },
+          {
+            "name": "Gebjalia",
+            "description": "Fresh cheese rolls with mint, dressed in yogurt and spices."
+          }
+        ],
+        "venues": [
+          "Oda Wines in Martvili",
+          "Taverns in Zugdidi",
+          "Roadside foodie stands"
+        ],
+        "img_src": "https://example.com/images/samegrelo.jpg",
+        "img_alt": "Samegrelo"
+      },
+      {
+        "id": "adjara",
+        "title": "Adjara",
+        "intro": "Adjara is a subtropical coastal corner blending Georgian and Ottoman influences. Upland Adjara favors dairy and hearty fare, while seaside cuisine features herbs, vegetables and fish. The region is home to Georgia’s most famous khachapuri style: Adjarian khachapuri, a boat-shaped bread filled with molten cheeses and topped with egg and butter.",
+        "dishes": [
+          {
+            "name": "Adjarian Khachapuri",
+            "description": "Boat-shaped bread filled with molten cheese, topped with a raw egg yolk and butter, mixed at the table."
+          },
+          {
+            "name": "Borano",
+            "description": "Pan-fried cheese curds in clarified butter."
+          },
+          {
+            "name": "Malakhto",
+            "description": "Bean mash of kidney beans ground with walnuts, raw grape juice, and oil."
+          },
+          {
+            "name": "Chirbuli",
+            "description": "Fluffy omelette spiked with walnuts and tomatoes."
+          },
+          {
+            "name": "Sinori",
+            "description": "Rolled dough sheets filled with fresh Nadughi cheese, fried and drizzled with butter."
+          },
+          {
+            "name": "Black Sea Fish Stew",
+            "description": "Local fish simmered in tomato-garlic sauces with tarragon."
+          }
+        ],
+        "venues": [
+          "Laguna and seaside taverns in Batumi",
+          "Guesthouses in Khulo and Vashlovani"
+        ],
+        "img_src": "https://example.com/images/adjara.jpg",
+        "img_alt": "Adjara"
+      },
+      {
+        "id": "racha-lechkhumi",
+        "title": "Racha-Lechkhumi",
+        "intro": "Highland Racha (with neighbor Lechkhumi) is rugged and cold, so its cuisine is warming and richly flavored. Dairy, bacon and garlic are prominent, offering comforting dishes like shakmeruli (garlic chicken) and succulent cured meats.",
+        "dishes": [
+          {
+            "name": "Shkmeruli",
+            "description": "Roasted chicken braised in a creamy milk-garlic sauce."
+          },
+          {
+            "name": "Lori (Pork Belly)",
+            "description": "Cured and smoked pork belly fried or grilled."
+          },
+          {
+            "name": "Lobiani",
+            "description": "Bean-filled bread with spiced red beans and bacon."
+          },
+          {
+            "name": "Rachuli Khachapuri",
+            "description": "Square cheese bread often made with buckwheat or wheat flour."
+          },
+          {
+            "name": "Kvanchkara",
+            "description": "Semi-sweet red wine made from Aleksandrouli and Mujuretuli grapes."
+          }
+        ],
+        "venues": [
+          "Taverns in Ambrolauri and Oni",
+          "Roadside guesthouses in Shovi"
+        ],
+        "img_src": "https://example.com/images/racha-lechkhumi.jpg",
+        "img_alt": "Racha-Lechkhumi"
+      },
+      {
+        "id": "svaneti",
+        "title": "Svaneti",
+        "intro": "Svaneti’s mountain farmers rely on whatever they grow or raise at 2,000m. Cornmeal, barley, potatoes and home cheeses feature in a simple, hearty cuisine. This region’s dishes are robust and sustaining, designed to fuel hard work and withstand severe winters.",
+        "dishes": [
+          {
+            "name": "Kubdari",
+            "description": "Meat pie filled with spiced minced pork or beef and baked until golden."
+          },
+          {
+            "name": "Chvishtari",
+            "description": "Cornbread with cheese pockets, fried or baked."
+          },
+          {
+            "name": "Lutspeq",
+            "description": "Barley or buckwheat porridge with garlic, salt, pepper, and meat bits."
+          },
+          {
+            "name": "Tashmijabi",
+            "description": "Mashed potatoes mixed with crumbled cheese, butter, and garlic."
+          },
+          {
+            "name": "Guda Cheese",
+            "description": "Sheep’s-milk cheese aged in goatskins."
+          }
+        ],
+        "venues": [
+          "Households and guesthouses in Mestia and Ushguli",
+          "Svan dishes at Shavi Lomi (Tbilisi)"
+        ],
+        "img_src": "https://example.com/images/svaneti.jpg",
+        "img_alt": "Svaneti"
+      },
+      {
+        "id": "tusheti",
+        "title": "Tusheti",
+        "intro": "Tusheti lies in Georgia’s extreme northeast, a plateau of alpine meadows and sheep pastures. Its cuisine is austere yet bold, reflecting nomadic herding life. Locally-grown herbs, saltbush berries and plenty of meat and cheese define Tushetian food.",
+        "dishes": [
+          {
+            "name": "Lamb Khinkali",
+            "description": "Thick-wrapped dumplings filled with lamb or goat and spices."
+          },
+          {
+            "name": "Kothi/Kotori",
+            "description": "Cottage-cheese pie similar to khachapuri but square and herb-filled."
+          },
+          {
+            "name": "Guda Cheese",
+            "description": "Strong sheep’s-milk cheese aged in skin, often grilled."
+          },
+          {
+            "name": "Chvishtari",
+            "description": "Cornbread with cheese pockets."
+          },
+          {
+            "name": "Lobio",
+            "description": "Spiced red bean stew."
+          }
+        ],
+        "venues": [
+          "Family guesthouses in Omalo",
+          "Folk restaurants in Tbilisi like Pictograma"
+        ],
+        "img_src": "https://example.com/images/tusheti.jpg",
+        "img_alt": "Tusheti"
+      },
+      {
+        "id": "tbilisi",
+        "title": "Tbilisi",
+        "intro": "Tbilisi is a melting pot of every regional specialty. The capital’s food scene ranges from steaming street kiosks to refined dining, blending Persian, Turkish, Russian and Armenian influences. Yet the supra spirit holds – communal, generous and always paired with wine or chacha toasts.",
+        "dishes": [
+          {
+            "name": "Street Khachapuri",
+            "description": "Various regional styles of cheese bread sold from kiosks."
+          },
+          {
+            "name": "Khinkali",
+            "description": "Classic soup dumplings available at markets."
+          },
+          {
+            "name": "Pkhali",
+            "description": "Assortment of vegetable-walnut pâtés."
+          },
+          {
+            "name": "Lobio",
+            "description": "Hearty red bean stew."
+          },
+          {
+            "name": "Modern Interpretations",
+            "description": "Gourmet reimaginings of classics at restaurants like Barbarestan and Cafe Littera."
+          }
+        ],
+        "venues": [
+          "Meidan and Dezerter bazaars",
+          "Barbarestan Restaurant",
+          "Cafe Littera"
+        ],
+        "img_src": "https://example.com/images/tbilisi.jpg",
+        "img_alt": "Tbilisi"
+      }
+    ]
+  }
+}

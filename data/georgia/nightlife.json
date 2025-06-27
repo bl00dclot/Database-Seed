@@ -1,0 +1,142 @@
+{
+  "Tbilisi": [
+    {
+      "name": "Bassiani",
+      "category": "Club",
+      "type": "Techno",
+      "description": "Largest techno club, marathon parties in a former pool, open until dawn."
+    },
+    {
+      "name": "KHIDI",
+      "category": "Club",
+      "type": "Techno",
+      "description": "Industrial underground club under a bridge with pulsating electronic beats."
+    },
+    {
+      "name": "Fabrika",
+      "category": "Bar/Club",
+      "type": "Arts hub",
+      "description": "Former factory turned creative space with multiple bars, live music, and rooftop parties."
+    },
+    {
+      "name": "Cafe Gallery",
+      "category": "Club/Café",
+      "type": "Electronic",
+      "description": "Art-filled café that hosts DJs and dance nights in an intimate setting."
+    },
+    {
+      "name": "Republic Lounge",
+      "category": "Bar",
+      "type": "Rooftop",
+      "description": "Swanky rooftop lounge with live acoustic/jazz and city views."
+    },
+    {
+      "name": "El Centro",
+      "category": "Club",
+      "type": "Latin",
+      "description": "Lively Latin-themed club with salsa nights and signature cocktails."
+    },
+    {
+      "name": "Prozac",
+      "category": "Club",
+      "type": "EDM/Techno",
+      "description": "Psychedelic neon-lit club known for immersive lights and energetic parties."
+    },
+    {
+      "name": "Chacha Time",
+      "category": "Bar",
+      "type": "Brandy Bar",
+      "description": "Casual bar dedicated to chacha tastings, festive atmosphere."
+    },
+    {
+      "name": "Drama Bar",
+      "category": "Bar",
+      "type": "Speakeasy",
+      "description": "Hidden bar with experimental cocktails, live performances, and dimly lit vibe."
+    },
+    {
+      "name": "Wałszawa Tbilisi",
+      "category": "Diner-Bar",
+      "type": "24/7",
+      "description": "Retro-style diner-bar with Polish menu, cheap cocktails, open around the clock."
+    }
+  ],
+  "Batumi": [
+    {
+      "name": "Gate",
+      "category": "Beach Club",
+      "type": "Open-air",
+      "description": "Sunset parties with international DJs right on the sand."
+    },
+    {
+      "name": "Boom Boom Beach",
+      "category": "Beach Club",
+      "type": "Party",
+      "description": "Live DJ sets and fire dancers, party until dawn."
+    },
+    {
+      "name": "360 Sky Bar",
+      "category": "Bar",
+      "type": "Rooftop",
+      "description": "360° views of city and sea, live jazz/lounge music."
+    },
+    {
+      "name": "Clouds Bar",
+      "category": "Bar",
+      "type": "Rooftop",
+      "description": "Panoramic sea and city views, upscale cocktails, live DJs."
+    },
+    {
+      "name": "Intourist Lounge",
+      "category": "Bar",
+      "type": "Jazz",
+      "description": "Piano bar hosting professional jazz ensembles weekly."
+    },
+    {
+      "name": "Munich",
+      "category": "Pub",
+      "type": "Beer Hall",
+      "description": "Bavarian-style pub with live music and large beer selection."
+    },
+    {
+      "name": "Zona",
+      "category": "Bar",
+      "type": "Music & Karaoke",
+      "description": "Live music and karaoke nights, laid-back vibe and low prices."
+    }
+  ],
+  "Kutaisi": [
+    {
+      "name": "Reflector",
+      "category": "Club",
+      "type": "Electronic",
+      "description": "Basement club popular with local younger crowd."
+    },
+    {
+      "name": "Winetage",
+      "category": "Bar",
+      "type": "Wine Bar",
+      "description": "Wine shop/bar pouring local vintages in a cozy cellar."
+    },
+    {
+      "name": "Hacker-Pschorr",
+      "category": "Pub",
+      "type": "Beer Pub",
+      "description": "Casual pub playing rock and pop music."
+    }
+  ],
+  "Kakheti": [
+    {
+      "name": "Telavi Wine Bars",
+      "category": "Bar",
+      "type": "Wine Bar & Cellar",
+      "description": "Late-night cellar bars with home-brewed wines and folk performances."
+    },
+    {
+      "name": "Tavsatekhi",
+      "category": "Bar",
+      "type": "Pub & Games",
+      "description": "Modern pub with live music and karaoke nights."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+[
+    {
+      "name": "Kakheti",
+      "intro": "Kakheti is a region in eastern Georgia known for its picturesque landscapes, vineyards, and rich history. It is famous for its wine production and traditional winemaking methods.",
+      "description": "Kakheti is a region in eastern Georgia known for its picturesque landscapes, vineyards, and rich history. It is famous for its wine production and traditional winemaking methods. The region is home to several ancient monasteries, fortresses, and charming towns, making it a popular destination for tourists seeking both natural beauty and cultural experiences.",
+      "imageSrc": "/tour-pictures/guide-pictures/kakheti.jpg",
+      "imageAlt": "Kakheti"
+    },
+    {
+      "name": "Kazbegi",
+      "intro": "Kazbegi is a mountainous region in northern Georgia, known for its stunning landscapes and the iconic Gergeti Trinity Church. It offers breathtaking views of Mount Kazbek.",
+      "description": "Kazbegi is a mountainous region in northern Georgia, known for its stunning landscapes and the iconic Gergeti Trinity Church. It offers breathtaking views of Mount Kazbek, making it a popular destination for hiking and outdoor activities. The region is rich in natural beauty, with lush valleys, waterfalls, and unique geological formations.",
+      "imageSrc": "/tour-pictures/guide-pictures/mtskheta1.jpg",
+      "imageAlt": "Kazbegi"
+    },
+    {
+      "name": "Uplistikhe",
+      "intro": "Uplistikhe is an ancient rock-hewn town in Georgia, carved into a rocky hillside. It dates back to the early Iron Age and features unique cave structures.",
+      "description": "Uplistikhe is an ancient rock-hewn town in Georgia, carved into a rocky hillside. It dates back to the early Iron Age and features unique cave structures, churches, and living quarters. The site offers a glimpse into the region's history and architecture, making it a fascinating destination for history enthusiasts.",
+      "imageSrc": "/tour-pictures/guide-pictures/uplistikhe1.jpg",
+      "imageAlt": "Uplistikhe"
+    },
+    {
+      "name": "Martvili",
+      "intro": "Martvili is a picturesque region in western Georgia, known for its stunning canyons, waterfalls, and lush greenery. It offers opportunities for outdoor activities.",
+      "description": "Martvili is a picturesque region in western Georgia, known for its stunning canyons, waterfalls, and lush greenery. It offers opportunities for outdoor activities such as hiking, boating, and exploring the natural beauty of the area. The Martvili Canyon is particularly famous for its crystal-clear waters and scenic landscapes.",
+      "imageSrc": "/tour-pictures/guide-pictures/martvili1.jpg",
+      "imageAlt": "Martvili"
+    }
+  ]

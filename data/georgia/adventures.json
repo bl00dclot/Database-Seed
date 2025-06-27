@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Paragliding",
+        "description": "Paragliding in Kazbegi offers breathtaking views of the Caucasus Mountains and the iconic Gergeti Trinity Church. Experience the thrill of soaring through the sky while enjoying stunning landscapes.",
+        "imageSrc": "/tour-pictures/adventures/paragliding.jpg",
+        "imageAlt": "Paragliding in Kazbegi",
+        "location": "Kazbegi"
+    },
+    {
+        "id": 2,
+        "name": "Rock Climbing",
+        "description": "Chiatura is known for its unique rock formations and abandoned cable cars. Experience the thrill of rock climbing in this fascinating location, surrounded by stunning views and rich history.",
+        "imageSrc": "/tour-pictures/adventures/rock-climbing.jpg",
+        "imageAlt": "Rock Climbing in Chiatura",
+        "location": "Chiatura"
+    },
+    {
+        "id": 3,
+        "name": "Diving",
+        "description": "Diving in Martvili offers a unique experience in the beautiful Martvili Canyon. Explore the crystal-clear waters and stunning underwater landscapes while enjoying the tranquility of nature.",
+        "imageSrc": "/tour-pictures/adventures/diving.jpg",
+        "imageAlt": "Diving in Martvili",
+        "location": "Martvili"
+    },
+    {
+        "id": 4,
+        "name": "Horse Riding",
+        "description": "Horse riding in Khevsureti allows you to explore the stunning landscapes of the region. Ride through picturesque valleys, ancient villages, and breathtaking mountain trails while immersing yourself in the natural beauty of Georgia.",
+        "imageSrc": "/tour-pictures/adventures/horse-riding.jpg",
+        "imageAlt": "Horse Riding in Khevsureti",
+        "location": "Khevsureti"
+    },
+    {
+        "id": 5,
+        "name": "Hiking",
+        "description": "Vashlovani National Park offers a unique hiking experience with its diverse landscapes, including semi-desert areas, canyons, and lush forests. Explore the park's rich biodiversity while enjoying the tranquility of nature.",
+        "imageSrc": "/tour-pictures/adventures/hiking.jpg",
+        "imageAlt": "Hiking in Vashlovani National Park",
+        "location": "Vashlovani National Park"
+    }
+]
