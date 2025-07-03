@@ -5,7 +5,7 @@ import { neon, Pool } from '@neondatabase/serverless';
 import tags from './tags.mjs'
 import 'dotenv/config'
 // --- CONFIGURATION ---
-console.log(process.env.DATABASE_URL)
+
 const DATA_DIR = path.join(process.cwd(), 'data', 'georgia');
 console.log(`Using data directory: ${DATA_DIR}`);
 
@@ -30,7 +30,7 @@ class StructuredCard {
 }
 
 class ParagraphBlock {
-  constructor(text, title = '') {
+  constructor(text = '', title = '') {
     this.type = 'paragraph';
     this.text = text;
     this.title = title
@@ -212,7 +212,9 @@ function transformForSeed(src) {
         mergedArray.map((card) => {
           return new StructuredCard({
             title: card.title,
-            description: card.content || '',
+            description: new ParagraphBlock(
+              card.content || ''
+            ) || '',
             img_src: card.img_src || '',
             img_alt: card.img_alt || '',
             items: card.items || [],
@@ -251,7 +253,7 @@ function transformForSeed(src) {
       break;
     case 'culture':
 
-        const newJSONData = new ContentBlock(
+        const newJSONData_Culture = new ContentBlock(
         "Culture and Traditions of Georgia",
         new ParagraphBlock(
           "Explore the rich culture and traditions of Georgia, from its ancient history to modern practices."
@@ -259,7 +261,11 @@ function transformForSeed(src) {
         jsonData.map((card) => {
           return new StructuredCard({
             title: card.title,
-            description: card.content || '',
+            description: card.content.map((content) => {
+              return new ParagraphBlock(
+                content.text || ''
+              )
+            }) || '',
             img_src: card.img_src || '',
             img_alt: card.img_alt || '',
             items: card.items || [],
@@ -267,9 +273,8 @@ function transformForSeed(src) {
           });
         }),
       );
-
         jsonData.length = 0; // Clear the original jsonData array
-        jsonData.push(newJSONData);
+        jsonData.push(newJSONData_Culture);
       topics = tags.culture;
       break;
     case 'nature':
@@ -325,13 +330,13 @@ function transformForSeed(src) {
       const newJSONData_Cuisine = new ContentBlock(
         jsonData[0].page.title || "Cuisine of Georgia",
         new ParagraphBlock(
-          jsonData[0].page.intro || "Explore the rich and diverse cuisine of Georgia, known for its unique flavors and traditional dishes."
+          jsonData[0].page.intro || "Explore the rich and diverse flavors of Georgia through the lens of its distinct regions. From the wine-soaked valleys of Kakheti to the alpine pastures of Tusheti, discover traditional dishes, hidden gems, and where to taste them authentically."
         ),
         jsonData[0].page.sections.map((section) => {
           return new StructuredCard({
             title: section.title || '',
-            description: new ParagraphBlock(
-              section.description || ''
+            description: section.intro === '' ? '' : new ParagraphBlock(
+              section.intro || ''
             ),
             img_src: section.img_src || '',
             img_alt: section.img_alt || '',
@@ -387,11 +392,11 @@ function transformForSeed(src) {
               img_alt: option.imageAlt || '',
               items: option.locations.map((location) => {
                 return new StructuredCard({
-                  title: location.location,
-                  description: location.name || '',
+                  title: location.name,
+                  description: '',
                   img_src: location.imageSrc || '',
                   img_alt: location.imageAlt || '',
-                  items: []
+                  items: [location.location]
                 });
               }) || [],
               footer: option.footer || ''
@@ -487,6 +492,7 @@ function transformForSeed(src) {
           })
         })
       );
+      console.log('Transformed wine data:', newJSONData_Wine.content[0].structured_card);
       jsonData.length = 0;
       jsonData.push(newJSONData_Wine);
       topics = tags.wine;
@@ -597,5 +603,5 @@ console.log('✅ Connected to the database.');
 }
 
 // Run the main function
-main().catch(console.error);
+// main().catch(console.error);
 
