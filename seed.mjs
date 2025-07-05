@@ -324,7 +324,7 @@ function transformForSeed(src) {
       jsonData.length = 0; // Clear the original jsonData array
       jsonData.push(newJSONData_Adventures);
 
-      topics = tags.adventures;
+      topics = tags.adventure;
       break;
     case 'cuisine':
       const newJSONData_Cuisine = new ContentBlock(
@@ -492,7 +492,6 @@ function transformForSeed(src) {
           })
         })
       );
-      console.log('Transformed wine data:', newJSONData_Wine.content[0].structured_card);
       jsonData.length = 0;
       jsonData.push(newJSONData_Wine);
       topics = tags.wine;
@@ -514,6 +513,8 @@ const INPUT_DIR = path.join(process.cwd(), 'data', 'georgia');
 const georgiaData = loadAllJson(INPUT_DIR);
 // const OUTPUT_PATH = path.join(process.cwd(), 'data', 'georgia', 'seeded.json');
 const seededData = georgiaData.map(transformForSeed);
+
+console.log(seededData)
 
 async function upsertTopic(client, topicName) {
     const slug = topicName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
