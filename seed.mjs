@@ -536,7 +536,7 @@ console.log('✅ Connected to the database.');
     await client.query('BEGIN');
     console.log('🚀 Starting transaction...');
 
-    await client.query(`USE georgia-horizons`);
+    await client.query(`SET search_path TO georgia_horizons`);
     console.log('Using database: georgia-horizons');
 
     // 1. Define the page and its associated JSON data
