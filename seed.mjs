@@ -514,8 +514,6 @@ const georgiaData = loadAllJson(INPUT_DIR);
 // const OUTPUT_PATH = path.join(process.cwd(), 'data', 'georgia', 'seeded.json');
 const seededData = georgiaData.map(transformForSeed);
 
-console.log(seededData)
-
 async function upsertTopic(client, topicName) {
     const slug = topicName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and');
     const res = await client.query(
@@ -537,6 +535,9 @@ console.log('✅ Connected to the database.');
     // If any part fails, the whole process will be rolled back.
     await client.query('BEGIN');
     console.log('🚀 Starting transaction...');
+
+    await client.query(`USE georgia-horizons`);
+    console.log('Using database: georgia-horizons');
 
     // 1. Define the page and its associated JSON data
     for (const pageData of seededData) {
@@ -574,7 +575,7 @@ console.log('✅ Connected to the database.');
               `INSERT INTO structured_cards
                  (page_id, card_title, card_description, items, img_src, img_alt, order_on_page)
                VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-              [pageId, sc.title, sc.description, JSON.stringify(sc.items), sc.img_src, sc.img_alt, blk.order]
+              [pageId, sc.title, JSON.stringify(sc.description), JSON.stringify(sc.items), sc.img_src, sc.img_alt, blk.order]
             );
           } else {
             await client.query(
@@ -604,5 +605,5 @@ console.log('✅ Connected to the database.');
 }
 
 // Run the main function
-// main().catch(console.error);
+main().catch(console.error);
 
