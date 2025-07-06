@@ -99,7 +99,7 @@ function normalizeCard(card) {
   let order = 0;
 
   // Heading
-  blocks.push({ type: 'heading_h2', payload: { text: card.title }, order: order++ });
+  blocks.push({ type: 'heading_h1', payload: { text: card.title }, order: order++ });
 
   // Image
   if (card.img_src) {
@@ -573,9 +573,9 @@ console.log('✅ Connected to the database.');
             const sc = blk.payload;
             await client.query(
               `INSERT INTO structured_cards
-                 (page_id, card_title, card_description, items, img_src, img_alt, order_on_page)
-               VALUES ($1, $2, $3, $4, $5, $6, $7)`,
-              [pageId, sc.title, JSON.stringify(sc.description), JSON.stringify(sc.items), sc.img_src, sc.img_alt, blk.order]
+                 (page_id, card_title, card_description, items, img_src, img_alt, footer, order_on_page)
+               VALUES ($1, $2, $3, $4, $5, $6, $7, $8)`,
+              [pageId, sc.title, JSON.stringify(sc.description), JSON.stringify(sc.items), sc.img_src, sc.img_alt, JSON.stringify(sc.footer), blk.order]
             );
           } else {
             await client.query(
